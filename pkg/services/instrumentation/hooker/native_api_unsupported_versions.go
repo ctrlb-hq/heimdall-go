@@ -4,8 +4,8 @@
 package hooker
 
 import (
-	"github.com/ctrlb-hq/heimdall-go/pkg/augs"
 	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
 	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
 	"github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_validator"
 )
@@ -24,7 +24,7 @@ func Destroy() error {
 	return heimdallErrors.NewUnsupportedPlatform()
 }
 
-func (n *NativeAPI) RegisterFunctionBreakpointsState(functionEntry Address, functionEnd Address, breakpoints []*augs.BreakpointInstance, bpCallback uintptr, prologue []byte, hasStackFrame bool) (stateId int, err error) {
+func (n *NativeAPI) RegisterFunctionBreakpointsState(functionEntry Address, functionEnd Address, breakpoints []*probes.BreakpointInstance, bpCallback uintptr, prologue []byte, hasStackFrame bool) (stateId int, err error) {
 	return 0, heimdallErrors.NewUnsupportedPlatform()
 }
 
