@@ -4,7 +4,7 @@ import (
 	"encoding/binary"
 	"math"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 const (

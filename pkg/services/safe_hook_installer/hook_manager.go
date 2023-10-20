@@ -1,6 +1,6 @@
 package safe_hook_installer
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/safe_hook_validator"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_validator"
 
 type hookManager struct {
 	getFunctionType func(functionEntry uint64, functionEnd uint64) (safe_hook_validator.FunctionType, error)

@@ -34,12 +34,12 @@ import (
 	"log"
 	"math"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/src"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/sys"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/src"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/sys"
 )
 
 var zrReplace = map[obj.As]bool{

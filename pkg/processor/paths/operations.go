@@ -3,9 +3,9 @@ package paths
 import (
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor/namespaces"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor/namespaces"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 type pathOperation interface {

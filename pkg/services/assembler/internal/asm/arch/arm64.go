@@ -11,8 +11,8 @@ package arch
 import (
 	"errors"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/arm64"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/arm64"
 )
 
 var arm64LS = map[string]uint8{

@@ -4,7 +4,7 @@
 
 package goobj
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
 
 func NBuiltin() int {
 	return len(builtins)

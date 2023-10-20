@@ -5,8 +5,8 @@
 package obj
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/goobj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/src"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/goobj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/src"
 )
 
 func (ctxt *Link) AddImport(pkg string, fingerprint goobj.FingerprintType) {

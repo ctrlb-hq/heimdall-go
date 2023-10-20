@@ -1,6 +1,6 @@
 package namespaces
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+import "github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 
 type NoopNamespace struct{}
 

@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/goexperiment"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/goexperiment"
 )
 
 type ExperimentFlags struct {

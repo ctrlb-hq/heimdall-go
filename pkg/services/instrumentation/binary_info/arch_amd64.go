@@ -32,9 +32,9 @@ import (
 	"math"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/registers"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/frame"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/op"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/registers"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/frame"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/op"
 )
 
 const (

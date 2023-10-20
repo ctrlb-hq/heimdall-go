@@ -33,7 +33,7 @@ package x86
 import (
 	"fmt"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 )
 
 var Register = []string{

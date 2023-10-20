@@ -1,10 +1,10 @@
 package processor
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor/namespaces"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor/operations"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor/namespaces"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor/operations"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
 )
 
 type operationFactory interface {

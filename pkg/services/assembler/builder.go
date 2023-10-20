@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/asm/arch"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/asm/arch"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 )
 
 var a, ctxt = func() (*arch.Arch, *obj.Link) {

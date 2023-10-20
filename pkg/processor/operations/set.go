@@ -1,12 +1,12 @@
 package operations
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor/namespaces"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor/paths"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor/namespaces"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor/paths"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
 )
 
 type pathPair struct {

@@ -3,7 +3,7 @@ package locations_set
 import (
 	"sync"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
 )
 
 type BreakpointStorage struct {

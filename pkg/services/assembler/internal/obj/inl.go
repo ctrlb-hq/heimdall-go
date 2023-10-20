@@ -4,7 +4,7 @@
 
 package obj
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/src"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/src"
 
 type InlTree struct {
 	nodes []InlinedCall

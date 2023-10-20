@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/goobj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/goobj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
 )
 
 func funcpctab(ctxt *Link, func_ *LSym, desc string, valfunc func(*Link, *LSym, int32, *Prog, int32, interface{}) int32, arg interface{}) *LSym {

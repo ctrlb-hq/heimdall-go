@@ -21,7 +21,7 @@
 
 package registers
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/op"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/op"
 
 type Registers interface {
 	PC() uint64

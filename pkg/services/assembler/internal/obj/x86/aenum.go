@@ -2,7 +2,7 @@
 
 package x86
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 
 //go:generate go run ../stringer.go -i $GOFILE -o anames.go -p x86
 

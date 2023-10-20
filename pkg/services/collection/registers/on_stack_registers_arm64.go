@@ -6,7 +6,7 @@ package registers
 import (
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/op"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/op"
 )
 
 type OnStackRegisters struct {

@@ -7,16 +7,16 @@ import (
 	"sync"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/locations_set"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/go_id"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/registers"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/go_runtime"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/locations_set"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/go_id"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/registers"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/go_runtime"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 func getContext() uintptr

@@ -6,7 +6,7 @@ package binary_info
 import (
 	"reflect"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 func (b *BinaryInfo) GetUnwrappedFuncPointer(f func()) (uintptr, heimdallErrors.HeimdallError) {

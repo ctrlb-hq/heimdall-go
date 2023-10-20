@@ -33,11 +33,11 @@ package arm
 import (
 	"log"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/sys"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/sys"
 )
 
 var progedit_tlsfallback *obj.LSym

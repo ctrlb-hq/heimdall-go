@@ -1,11 +1,11 @@
 package prologue
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/disassembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker/regbackup"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/disassembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker/regbackup"
 )
 
 var ForceLongPrologue = false

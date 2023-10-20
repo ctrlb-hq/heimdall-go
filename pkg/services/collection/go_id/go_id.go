@@ -3,7 +3,7 @@ package go_id
 import (
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/go_runtime"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/go_runtime"
 )
 
 //go:nosplit

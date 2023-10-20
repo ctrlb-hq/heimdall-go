@@ -3,12 +3,12 @@ package locations
 import (
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/com_ws"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes/actions"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes/conditions"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/com_ws"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes/actions"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes/conditions"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
 )
 
 type LocationFactory struct {

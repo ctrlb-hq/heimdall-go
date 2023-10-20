@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
 )
 
 var sanitizeBlacklist = map[string]struct{}{"Labels": {}}

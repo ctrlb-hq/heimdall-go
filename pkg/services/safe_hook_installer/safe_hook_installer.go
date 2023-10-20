@@ -1,11 +1,11 @@
 package safe_hook_installer
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/callstack"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/protector"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/safe_hook_validator"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/suspender"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/callstack"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/protector"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_validator"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/suspender"
 )
 
 type HookManager interface {

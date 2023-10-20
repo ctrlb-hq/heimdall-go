@@ -4,7 +4,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 func GetFunctionName(fullFunctionName string) (string, heimdallErrors.HeimdallError) {

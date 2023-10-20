@@ -6,7 +6,7 @@ package go_runtime
 import (
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
 )
 
 type GPtr uintptr

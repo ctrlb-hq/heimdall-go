@@ -10,10 +10,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 	gorilla "github.com/gorilla/websocket"
 )
 

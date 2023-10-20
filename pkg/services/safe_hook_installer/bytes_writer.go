@@ -8,8 +8,8 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/protector"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/protector"
 )
 
 func (h *HookWriter) AddWritePermission() heimdallErrors.HeimdallError {

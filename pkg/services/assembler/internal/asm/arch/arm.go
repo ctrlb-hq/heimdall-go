@@ -11,8 +11,8 @@ package arch
 import (
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/arm"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/arm"
 )
 
 var armLS = map[string]uint8{

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/callstack"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/callstack"
 )
 
 type FunctionType int

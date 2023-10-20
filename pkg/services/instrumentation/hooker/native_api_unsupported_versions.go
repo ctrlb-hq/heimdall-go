@@ -4,10 +4,10 @@
 package hooker
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/augs"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/safe_hook_validator"
+	"github.com/ctrlb-hq/heimdall-go/pkg/augs"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_validator"
 )
 
 type NativeAPI struct{}

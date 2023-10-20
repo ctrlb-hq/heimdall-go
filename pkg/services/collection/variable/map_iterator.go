@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/memory"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/memory"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
 )
 
 type mapIterator struct {

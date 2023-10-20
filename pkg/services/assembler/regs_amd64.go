@@ -1,7 +1,7 @@
 package assembler
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/x86"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/x86"
 	"golang.org/x/arch/x86/x86asm"
 )
 

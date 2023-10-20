@@ -3,7 +3,7 @@ package assembler
 import (
 	"math"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 	"golang.org/x/arch/arm64/arm64asm"
 )
 

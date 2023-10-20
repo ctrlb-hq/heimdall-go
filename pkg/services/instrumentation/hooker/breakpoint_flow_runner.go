@@ -4,15 +4,15 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/callstack"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/safe_hook_installer"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/safe_hook_validator"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/suspender"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/callstack"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_installer"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/safe_hook_validator"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/suspender"
 )
 
 const (

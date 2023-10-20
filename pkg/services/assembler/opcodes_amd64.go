@@ -1,6 +1,6 @@
 package assembler
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/x86"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/x86"
 
 const (
 	AAAA = x86.AAAA + iota

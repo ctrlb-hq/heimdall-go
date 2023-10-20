@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/registers"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/variable"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/registers"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/variable"
 )
 
 type Stackframe struct {

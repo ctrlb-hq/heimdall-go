@@ -3,9 +3,9 @@ package prologue
 import (
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
 )
 
 var morestackAddrs = make(map[uintptr]struct{})

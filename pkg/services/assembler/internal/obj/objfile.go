@@ -18,11 +18,11 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/bio"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/goobj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/sys"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/bio"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/goobj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/sys"
 )
 
 const UnlinkablePkg = "<unlinkable>"

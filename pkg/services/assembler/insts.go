@@ -1,6 +1,6 @@
 package assembler
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+import "github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 
 const (
 	ACALL = obj.ACALL

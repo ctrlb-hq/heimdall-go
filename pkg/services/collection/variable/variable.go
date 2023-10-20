@@ -35,13 +35,13 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/memory"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/op"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/memory"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/op"
 )
 
 const (

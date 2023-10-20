@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 	"github.com/yhirose/go-peg"
 )
 

@@ -5,8 +5,8 @@
 package objabi
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
 )
 
 func StackNosplit(race bool) int {

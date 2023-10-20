@@ -7,16 +7,16 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/locations_set"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/callback"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker/prologue"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/locations_set"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/callback"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker/prologue"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 const maxStackFrames = 128

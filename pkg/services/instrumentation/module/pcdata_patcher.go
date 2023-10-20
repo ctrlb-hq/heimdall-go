@@ -6,7 +6,7 @@ package module
 import (
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 	"github.com/go-errors/errors"
 )
 

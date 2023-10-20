@@ -6,9 +6,10 @@ package common
 import (
 	"reflect"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/disassembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/disassembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 	"golang.org/x/arch/x86/x86asm"
 )
 

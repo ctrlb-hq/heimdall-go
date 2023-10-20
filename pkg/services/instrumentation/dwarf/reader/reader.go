@@ -24,7 +24,7 @@ package reader
 import (
 	"debug/dwarf"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
 )
 
 func InlineStack(root *godwarf.Tree, pc uint64) []*godwarf.Tree {

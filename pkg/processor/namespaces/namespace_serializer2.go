@@ -6,10 +6,10 @@ import (
 	"unicode/utf8"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	pb "github.com/ctrlb-hq/heimdall-go-wip/pkg/protobuf"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	pb "github.com/ctrlb-hq/heimdall-go/pkg/protobuf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 	"google.golang.org/protobuf/types/known/timestamppb"
 )
 

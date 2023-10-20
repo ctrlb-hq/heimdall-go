@@ -6,14 +6,14 @@ package prologue
 import (
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 	"golang.org/x/arch/arm64/arm64asm"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/common"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker/regbackup"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/common"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker/regbackup"
 )
 
 var stackUsageBuffer = 0x40 + 0x400

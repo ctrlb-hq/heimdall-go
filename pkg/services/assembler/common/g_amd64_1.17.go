@@ -4,7 +4,7 @@
 package common
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
 	"golang.org/x/arch/x86/x86asm"
 )
 

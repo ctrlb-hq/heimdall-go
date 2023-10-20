@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/bio"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/unsafeheader"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/bio"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/unsafeheader"
 )
 
 const stringRefSize = 8

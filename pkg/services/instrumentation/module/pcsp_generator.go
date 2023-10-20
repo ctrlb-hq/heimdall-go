@@ -1,8 +1,8 @@
 package module
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/disassembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/disassembler"
 )
 
 func pcspFromInstructions(instructions []*disassembler.Instruction, lastOffset uintptr) []PCDataEntry {

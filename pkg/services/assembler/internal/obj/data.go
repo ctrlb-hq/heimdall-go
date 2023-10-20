@@ -35,7 +35,7 @@ import (
 	"log"
 	"math"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
 )
 
 func (s *LSym) Grow(lsiz int64) {

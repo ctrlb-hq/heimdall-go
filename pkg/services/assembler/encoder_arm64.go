@@ -3,7 +3,7 @@ package assembler
 import (
 	"encoding/binary"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 const b = 0x14000000

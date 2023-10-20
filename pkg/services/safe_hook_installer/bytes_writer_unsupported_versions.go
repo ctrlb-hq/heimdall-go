@@ -3,7 +3,7 @@
 
 package safe_hook_installer
 
-import "github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+import "github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 
 func (h *HookWriter) AddWritePermission() heimdallErrors.HeimdallError {
 	return heimdallErrors.NewUnsupportedPlatform()

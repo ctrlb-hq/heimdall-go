@@ -4,12 +4,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/com_ws"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/common"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/messages"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/com_ws"
+	"github.com/ctrlb-hq/heimdall-go/pkg/common"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/messages"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 type CommandHandler struct {

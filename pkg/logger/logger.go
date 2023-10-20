@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"runtime"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
 	"github.com/sirupsen/logrus"
 
 	logrus_lumberjack "github.com/fallais/logrus-lumberjack-hook"

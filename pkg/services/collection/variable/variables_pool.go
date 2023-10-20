@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
 )
 
 type VariablesPool chan *internalVariable

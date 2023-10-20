@@ -3,7 +3,7 @@ package probes
 import (
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/variable"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/variable"
 )
 
 type Breakpoint struct {

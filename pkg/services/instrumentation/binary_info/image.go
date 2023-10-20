@@ -27,7 +27,7 @@ import (
 	"sort"
 	"sync"
 
-	godwarf2 "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
+	godwarf2 "github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
 	"github.com/hashicorp/golang-lru/simplelru"
 )
 

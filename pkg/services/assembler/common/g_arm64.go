@@ -4,8 +4,8 @@
 package common
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler"
 	"golang.org/x/arch/arm64/arm64asm"
 )
 

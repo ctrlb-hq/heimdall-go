@@ -26,8 +26,8 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/util"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/util"
 )
 
 type Dwarf5Reader struct {

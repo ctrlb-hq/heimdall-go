@@ -24,7 +24,7 @@ package binary_info
 import (
 	"debug/dwarf"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/line"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/line"
 )
 
 type compileUnit struct {

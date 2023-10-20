@@ -4,9 +4,9 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes/locations"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes/locations"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
 	"github.com/go-errors/errors"
 	"github.com/gogo/protobuf/sortkeys"
 )

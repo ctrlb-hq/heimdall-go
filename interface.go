@@ -7,8 +7,8 @@
 package heimdall
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	_ "github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	_ "github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker"
 )
 
 type AtlasOptions = config.AtlasOptions

@@ -3,14 +3,14 @@ package instrumentation
 import (
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/locations_set"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/variable"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/hooker"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/locations_set"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/variable"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/hooker"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
 	"github.com/google/uuid"
 )
 

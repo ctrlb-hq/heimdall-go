@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/arm"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/arm64"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj/x86"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/arm"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/arm64"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj/x86"
 )
 
 const (

@@ -3,7 +3,7 @@ package namespaces
 import (
 	"io"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 type ContainerNamespace struct {

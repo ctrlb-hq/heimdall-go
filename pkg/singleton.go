@@ -10,14 +10,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/com_ws"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probe_manager"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/common"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/com_ws"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probe_manager"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/common"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 type singleton struct {

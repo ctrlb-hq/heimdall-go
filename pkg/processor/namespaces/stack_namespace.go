@@ -4,8 +4,8 @@ import (
 	"container/list"
 	"strconv"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection"
 )
 
 const defaultTracebackDepth = 1000

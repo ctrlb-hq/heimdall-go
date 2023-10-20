@@ -9,11 +9,11 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/variable"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/variable"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
 )
 
 type ReferenceType struct{}

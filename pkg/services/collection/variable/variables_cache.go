@@ -1,8 +1,8 @@
 package variable
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/memory"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/memory"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
 )
 
 type variablesCacheKey struct {

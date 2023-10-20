@@ -3,7 +3,7 @@ package namespaces
 import (
 	"fmt"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 type GoUtilsNamespace struct {

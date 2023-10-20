@@ -30,11 +30,11 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/collection/memory"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/binary_info"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/godwarf"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/collection/memory"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/binary_info"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/godwarf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
 )
 
 func runtimeTypeToDIE(_type *Variable, dataAddr uint64) (typ godwarf.Type, kind int64, err error) {

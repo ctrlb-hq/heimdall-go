@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
 )
 
 type CUFileIndex uint32

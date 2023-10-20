@@ -26,7 +26,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/util"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/util"
 )
 
 type ReadMemoryFunc func([]byte, uint64) (int, error)

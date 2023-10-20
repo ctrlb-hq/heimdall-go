@@ -6,8 +6,8 @@ package callstack
 import (
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/go_runtime"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/suspender"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/go_runtime"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/suspender"
 )
 
 //go:linkname allgs runtime.allgs

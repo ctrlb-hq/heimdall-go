@@ -8,11 +8,11 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	pb "github.com/ctrlb-hq/heimdall-go-wip/pkg/protobuf"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/module"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	pb "github.com/ctrlb-hq/heimdall-go/pkg/protobuf"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/module"
 )
 
 type hchan struct {

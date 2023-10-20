@@ -5,12 +5,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/locations_set"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes/locations"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/callback"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/locations_set"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes/locations"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/callback"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
 	"github.com/pkg/errors"
 )
 

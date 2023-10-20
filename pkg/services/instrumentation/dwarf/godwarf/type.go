@@ -38,8 +38,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/op"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation/dwarf/util"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/op"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation/dwarf/util"
 )
 
 const (

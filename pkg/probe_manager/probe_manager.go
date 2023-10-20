@@ -6,15 +6,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/com_ws"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/config"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/messages"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/probes/locations"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/processor"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/instrumentation"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/types"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/utils"
+	"github.com/ctrlb-hq/heimdall-go/pkg/com_ws"
+	"github.com/ctrlb-hq/heimdall-go/pkg/config"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/messages"
+	"github.com/ctrlb-hq/heimdall-go/pkg/probes/locations"
+	"github.com/ctrlb-hq/heimdall-go/pkg/processor"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/instrumentation"
+	"github.com/ctrlb-hq/heimdall-go/pkg/types"
+	"github.com/ctrlb-hq/heimdall-go/pkg/utils"
 )
 
 type ProbeManager interface {

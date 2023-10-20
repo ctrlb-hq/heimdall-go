@@ -7,7 +7,7 @@ import (
 	"os"
 	"unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 type pclntableInfo struct {

@@ -16,9 +16,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
 )
 
 const InfoPrefix = "go:info."

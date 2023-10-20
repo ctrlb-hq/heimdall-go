@@ -7,8 +7,8 @@ import (
 	"reflect"
 	"runtime"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/logger"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/logger"
 )
 
 func (b *BinaryInfo) GetUnwrappedFuncPointer(f func()) (uintptr, heimdallErrors.HeimdallError) {

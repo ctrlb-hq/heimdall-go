@@ -1,7 +1,7 @@
 package assembler
 
 import (
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 )
 
 func (b *Builder) Inst(op obj.As, dst, src Arg) *Instruction {

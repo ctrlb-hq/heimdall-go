@@ -4,7 +4,7 @@ import (
 	"math"
 	"runtime"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/suspender"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/suspender"
 )
 
 const ReallocateSizeAuto int = 0

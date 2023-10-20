@@ -10,8 +10,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/abi"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/abi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
 )
 
 const REG_NONE = 0

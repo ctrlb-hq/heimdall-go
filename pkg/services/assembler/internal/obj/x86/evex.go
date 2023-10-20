@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/obj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/obj"
 )
 
 type evexBits struct {

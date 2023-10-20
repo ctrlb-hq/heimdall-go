@@ -6,7 +6,7 @@ package utils
 import (
 	"runtime/debug"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 func GetBuildOpts() (map[string]string, *debug.BuildInfo, error) {

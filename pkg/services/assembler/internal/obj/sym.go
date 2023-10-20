@@ -39,9 +39,9 @@ import (
 	"math"
 	"sort"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/buildcfg"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/goobj"
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/services/assembler/internal/objabi"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/buildcfg"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/goobj"
+	"github.com/ctrlb-hq/heimdall-go/pkg/services/assembler/internal/objabi"
 )
 
 func Linknew(arch *LinkArch) *Link {

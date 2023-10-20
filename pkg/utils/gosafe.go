@@ -5,7 +5,7 @@ import (
 	"runtime/debug"
 	_ "unsafe"
 
-	"github.com/ctrlb-hq/heimdall-go-wip/pkg/heimdallErrors"
+	"github.com/ctrlb-hq/heimdall-go/pkg/heimdallErrors"
 )
 
 type OnPanicFuncType func(error)
