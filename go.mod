@@ -42,20 +42,3 @@ require (
 	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 )
-
-require (
-	github.com/creack/pty v1.1.9 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/kisielk/errcheck v1.1.0 // indirect
-	github.com/kisielk/gotool v1.0.0 // indirect
-	github.com/kr/pty v1.1.1 // indirect
-	github.com/mitchellh/reflectwalk v1.0.2 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/objx v0.4.0 // indirect
-	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110 // indirect
-	golang.org/x/term v0.0.0-20201126162022-7de9c90e9dd1 // indirect
-	golang.org/x/text v0.3.3 // indirect
-	golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
-	rsc.io/pdf v0.1.1 // indirect
-)
