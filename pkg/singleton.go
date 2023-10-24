@@ -183,11 +183,6 @@ func normalizeOpts(opts *config.AtlasOptions) error {
 	if opts.Apikey == "" && opts.BrokerHost == "" {
 		return heimdallErrors.NewHeimdallMissingToken()
 	}
-	// else if opts.Apikey != "" {
-	// 	if err := validateToken(opts.Apikey); err != nil {
-	// 		return err
-	// 	}
-	// }
 
 	if opts.BrokerHost == "" {
 		opts.BrokerHost = ControllerAddressHost
@@ -203,6 +198,18 @@ func normalizeOpts(opts *config.AtlasOptions) error {
 
 	if opts.LogLevel == "" {
 		opts.LogLevel = "info"
+	}
+
+	if opts.ApplicationName == "" {
+		opts.ApplicationName = utils.CreateUUIDString()
+	}
+
+	if opts.ApplicationStage == "" {
+		opts.ApplicationStage = "PROD"
+	}
+
+	if opts.ApplicationVersion == "" {
+		opts.ApplicationVersion = "1.0.0"
 	}
 
 	for key := range opts.Labels {

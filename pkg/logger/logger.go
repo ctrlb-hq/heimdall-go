@@ -64,7 +64,7 @@ func Logger() *logrus.Logger {
 
 func NewFileHandler(file string) error {
 	if file == "" {
-		file = filepath.Join(getLogFolder(), "go-rook.log")
+		file = filepath.Join(getLogFolder(), "heimdall-go.log")
 	}
 
 	ljk := &lumberjack.Logger{

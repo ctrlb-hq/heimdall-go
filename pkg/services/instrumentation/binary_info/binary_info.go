@@ -265,7 +265,7 @@ func shouldFilterSource(path string) bool {
 		return false
 	}
 
-	return strings.Contains(path, "gorook") || strings.Contains(path, "gosdk")
+	return strings.Contains(path, "gosdk")
 }
 
 func (bi *BinaryInfo) loadSources(compileUnits []*compileUnit) {
