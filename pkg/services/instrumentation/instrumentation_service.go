@@ -83,9 +83,9 @@ func (i *InstrumentationService) setBreakpoint(location locations.Location) heim
 	filename := location.GetFileName()
 	lineno := location.GetLineno()
 
-	breakpoint, rookErr := i.processManager.WriteBreakpoint(filename, lineno)
-	if rookErr != nil {
-		return rookErr
+	breakpoint, heimdallErr := i.processManager.WriteBreakpoint(filename, lineno)
+	if heimdallErr != nil {
+		return heimdallErr
 	}
 
 	i.locations.AddLocation(location, breakpoint)

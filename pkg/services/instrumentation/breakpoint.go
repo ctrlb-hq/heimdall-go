@@ -40,9 +40,9 @@ func writeBreakpoint(filename string, lineno int, getFunction functionGetter, ad
 }
 
 func (b *breakpointWriter) writeBreakpoint() (*probes.Breakpoint, heimdallErrors.HeimdallError) {
-	breakpointID, rookErr := createBreakpointID()
-	if rookErr != nil {
-		return nil, rookErr
+	breakpointID, heimdallErr := createBreakpointID()
+	if heimdallErr != nil {
+		return nil, heimdallErr
 	}
 	bp := &probes.Breakpoint{
 		File:       b.filename,
@@ -66,9 +66,9 @@ func (b *breakpointWriter) writeBreakpointInstance(bp *probes.Breakpoint, addr u
 		return bpInstance, nil
 	}
 
-	biFunction, function, rookErr := b.getFunction(addr)
-	if rookErr != nil {
-		return nil, rookErr
+	biFunction, function, heimdallErr := b.getFunction(addr)
+	if heimdallErr != nil {
+		return nil, heimdallErr
 	}
 	bpInstance := probes.NewBreakpointInstance(addr, bp, function)
 
@@ -79,9 +79,9 @@ func (b *breakpointWriter) writeBreakpointInstance(bp *probes.Breakpoint, addr u
 		return nil, heimdallErrors.NewFailedToAddBreakpoint(b.filename, b.lineno, err)
 	}
 
-	rookErr = applyBreakpointState(flowRunner, b.filename, b.lineno)
-	if rookErr != nil {
-		return nil, rookErr
+	heimdallErr = applyBreakpointState(flowRunner, b.filename, b.lineno)
+	if heimdallErr != nil {
+		return nil, heimdallErr
 	}
 
 	variableLocators, err := variable.GetVariableLocators(addr, b.lineno, biFunction, b.binaryInfo)
@@ -132,9 +132,9 @@ func (b *breakpointEraser) eraseBreakpointInstance(bpInstance *probes.Breakpoint
 		return heimdallErrors.NewFailedToRemoveBreakpoint(b.breakpoint.File, b.breakpoint.Line, err)
 	}
 
-	rookErr := applyBreakpointState(flowRunner, b.breakpoint.File, b.breakpoint.Line)
-	if rookErr != nil {
-		return rookErr
+	heimdallErr := applyBreakpointState(flowRunner, b.breakpoint.File, b.breakpoint.Line)
+	if heimdallErr != nil {
+		return heimdallErr
 	}
 	b.storage.RemoveBreakpointInstance(bpInstance)
 

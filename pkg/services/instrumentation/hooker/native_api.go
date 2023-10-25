@@ -111,7 +111,7 @@ func (a *nativeAPIImpl) RegisterFunctionBreakpointsState(functionEntry, function
 	if hasStackFrame {
 		cHasStackFrame = 1
 	}
-	stateID := int(C.HeimdallRegisterFunctionBreakpointsState(
+	stateID := int(C.HeimdalRegisterFunctionBreakpointsState(
 		getUnsafePointer(functionEntry),
 		getUnsafePointer(functionEnd),
 		C.int(len(breakpoints)),
@@ -123,7 +123,7 @@ func (a *nativeAPIImpl) RegisterFunctionBreakpointsState(functionEntry, function
 		C.int(cHasStackFrame)))
 
 	if stateID < 0 {
-		return stateID, fmt.Errorf("couldn't set new function breakpoint state (%v) (%s)", breakpoints, C.GoString(C.HeimdallGetHookerLastError()))
+		return stateID, fmt.Errorf("couldn't set new function breakpoint state (%v) (%s)", breakpoints, C.GoString(C.HeimdalGetHookerLastError()))
 	}
 
 	for i := range failedCounters {
@@ -134,9 +134,9 @@ func (a *nativeAPIImpl) RegisterFunctionBreakpointsState(functionEntry, function
 }
 
 func (a *nativeAPIImpl) GetInstructionMapping(functionEntry uint64, functionEnd uint64, stateId int) (addressMappings []module.AddressMapping, offsetMappings []module.AddressMapping, err error) {
-	rawAddressMapping := C.HeimdallGetInstructionMapping(getUnsafePointer(functionEntry), getUnsafePointer(functionEnd), C.int(stateId))
+	rawAddressMapping := C.HeimdalGetInstructionMapping(getUnsafePointer(functionEntry), getUnsafePointer(functionEnd), C.int(stateId))
 	if rawAddressMapping == nil {
-		return nil, nil, fmt.Errorf("Couldn't get instruction mapping (%s)\n", C.GoString(C.HeimdallGetHookerLastError()))
+		return nil, nil, fmt.Errorf("Couldn't get instruction mapping (%s)\n", C.GoString(C.HeimdalGetHookerLastError()))
 	}
 
 	addressMappings, offsetMappings = bufferToAddressMapping(rawAddressMapping, uintptr(functionEntry))
@@ -152,9 +152,9 @@ func (a *nativeAPIImpl) GetStateEntryAddr(functionEntry uint64, functionEnd uint
 }
 
 func (a *nativeAPIImpl) ApplyBreakpointsState(functionEntry uint64, functionEnd uint64, stateId int) error {
-	ret := int(C.HeimdallApplyBreakpointsState(getUnsafePointer(functionEntry), getUnsafePointer(functionEnd), C.int(stateId)))
+	ret := int(C.HeimdalApplyBreakpointsState(getUnsafePointer(functionEntry), getUnsafePointer(functionEnd), C.int(stateId)))
 	if ret != 0 {
-		return fmt.Errorf("Couldn't apply breakpoint state (%s)\n", C.GoString(C.HeimdallGetHookerLastError()))
+		return fmt.Errorf("Couldn't apply breakpoint state (%s)\n", C.GoString(C.HeimdalGetHookerLastError()))
 	}
 
 	return nil
@@ -163,9 +163,9 @@ func (a *nativeAPIImpl) ApplyBreakpointsState(functionEntry uint64, functionEnd 
 func (a *nativeAPIImpl) GetHookAddress(functionEntry uint64, functionEnd uint64, stateId int) (uintptr, heimdallErrors.HeimdallError) {
 	funcEntry := getUnsafePointer(functionEntry)
 	funcEnd := getUnsafePointer(functionEnd)
-	hookAddr := uint64(C.HeimdallGetHookAddress(funcEntry, funcEnd, C.int(stateId)))
+	hookAddr := uint64(C.HeimdalGetHookAddress(funcEntry, funcEnd, C.int(stateId)))
 	if hookAddr == 0 {
-		return 0, heimdallErrors.NewFailedToGetHookAddress(C.GoString(C.HeimdallGetHookerLastError()))
+		return 0, heimdallErrors.NewFailedToGetHookAddress(C.GoString(C.HeimdalGetHookerLastError()))
 	}
 	return uintptr(hookAddr), nil
 }
@@ -174,37 +174,37 @@ func (a *nativeAPIImpl) GetFunctionType(functionEntry uint64, functionEnd uint64
 	var err error
 	funcEntry := getUnsafePointer(functionEntry)
 	funcEnd := getUnsafePointer(functionEnd)
-	funcType := int(C.HeimdallGetFunctionType(funcEntry, funcEnd))
+	funcType := int(C.HeimdalGetFunctionType(funcEntry, funcEnd))
 	if funcType < 0 {
-		err = fmt.Errorf("Failed to get the function type (%s)\n", C.GoString(C.HeimdallGetHookerLastError()))
+		err = fmt.Errorf("Failed to get the function type (%s)\n", C.GoString(C.HeimdalGetHookerLastError()))
 	}
 	return safe_hook_validator.FunctionType(funcType), err
 }
 
 func (a *nativeAPIImpl) TriggerWatchDog(timeoutMS uint64) error {
 	var err error = nil
-	res := int(C.HeimdallTriggerWatchDog(C.ulonglong(timeoutMS)))
+	res := int(C.HeimdalTriggerWatchDog(C.ulonglong(timeoutMS)))
 	if res < 0 {
-		err = fmt.Errorf("Failed to trigger the watchdog (%s)\n", C.GoString(C.HeimdallGetHookerLastError()))
+		err = fmt.Errorf("Failed to trigger the watchdog (%s)\n", C.GoString(C.HeimdalGetHookerLastError()))
 	}
 	return err
 }
 
 func (a *nativeAPIImpl) DefuseWatchDog() {
-	C.HeimdallDefuseWatchDog()
+	C.HeimdalDefuseWatchDog()
 }
 
 func Init(someFunc func()) heimdallErrors.HeimdallError {
-	if C.HeimdallInit(unsafe.Pointer(reflect.ValueOf(someFunc).Pointer())) != 0 {
-		return heimdallErrors.NewFailedToInitNative(C.GoString(C.HeimdallGetHookerLastError()))
+	if C.HeimdalInit(unsafe.Pointer(reflect.ValueOf(someFunc).Pointer())) != 0 {
+		return heimdallErrors.NewFailedToInitNative(C.GoString(C.HeimdalGetHookerLastError()))
 	}
 
 	return nil
 }
 
 func Destroy() error {
-	if C.HeimdallDestroy() != 0 {
-		return fmt.Errorf("Native `Destroy` failed with error message: %s\n", C.GoString(C.HeimdallGetHookerLastError()))
+	if C.HeimdalDestroy() != 0 {
+		return fmt.Errorf("Native `Destroy` failed with error message: %s\n", C.GoString(C.HeimdalGetHookerLastError()))
 	}
 
 	return nil

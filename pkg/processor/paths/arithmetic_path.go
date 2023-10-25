@@ -91,11 +91,11 @@ func (a ArithmeticPath) WriteTo(namespace namespaces.Namespace, value namespaces
 		_, _ = operations.Execute(namespace)
 	}
 
-	var rookErr heimdallErrors.HeimdallError
+	var heimdallErr heimdallErrors.HeimdallError
 	for _, op := range a.writeOperations[:len(a.writeOperations)-1] {
-		namespace, rookErr = op.Read(namespace, true)
-		if rookErr != nil {
-			return rookErr
+		namespace, heimdallErr = op.Read(namespace, true)
+		if heimdallErr != nil {
+			return heimdallErr
 		}
 	}
 
@@ -105,9 +105,9 @@ func (a ArithmeticPath) WriteTo(namespace namespaces.Namespace, value namespaces
 		msg := fmt.Sprintf("last operation is not writable: %v (%#v)", lastOp, lastOp)
 		return heimdallErrors.NewHeimdallInvalidArithmeticPathException(msg, nil)
 	}
-	rookErr = lastWriteOp.Write(namespace, value)
-	if rookErr != nil {
-		return rookErr
+	heimdallErr = lastWriteOp.Write(namespace, value)
+	if heimdallErr != nil {
+		return heimdallErr
 	}
 
 	return nil

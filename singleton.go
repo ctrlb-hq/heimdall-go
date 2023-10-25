@@ -55,7 +55,7 @@ func start(opts AtlasOptions) {
 		printOptions(&opts)
 	}
 	if err != nil {
-		logger.Logger().WithError(err).Errorln("Failed to start rook")
+		logger.Logger().WithError(err).Errorln("Failed to start heimdall")
 		if heimdallErr, ok := err.(heimdallErrors.HeimdallError); ok {
 			switch {
 			case isErrorType(heimdallErr, heimdallErrors.NewHeimdallInvalidOptions("")),
