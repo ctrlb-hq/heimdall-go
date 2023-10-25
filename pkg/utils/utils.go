@@ -380,11 +380,19 @@ func ExtractActualValueFromFrame(valueMap map[string]interface{}) (interface{}, 
 		values := []interface{}{}
 		if value, ok := listValue["values"]; ok {
 			for _, v := range value.([]interface{}) {
-				if valMap, ok := v.(map[string]interface{}); ok {
-					if val, ok := valMap["Value"]; ok {
+				if valueNode, ok := v.(map[string]interface{}); ok {
+					valueType, typeOK := valueNode["original_type"].(string)
+					if !typeOK {
+						continue
+					}
+					if val, ok := valueNode["Value"]; ok {
 						if val != nil {
 							extractedVal, _ := ExtractActualValueFromFrame(val.(map[string]interface{}))
-							values = append(values, extractedVal)
+							valueMap := map[string]interface{}{
+								"@type":  valueType,
+								"@value": extractedVal,
+							}
+							values = append(values, valueMap)
 						}
 					}
 				}

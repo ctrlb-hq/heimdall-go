@@ -235,6 +235,9 @@ func (d *outputWs) GetFramesForTracePointSnapshotEvent(localsJson []byte, traceb
 	}
 	result := utils.ExtractVariableFromFrames(namespaceValue)
 
+	fmt.Println("namespaceValue:", namespaceValue)
+	fmt.Println("result:", result)
+
 	if len(frames) > 0 {
 		frames[0].Variables = result
 	}
