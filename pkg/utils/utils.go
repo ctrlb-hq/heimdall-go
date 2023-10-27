@@ -321,19 +321,21 @@ func ExtractVariableFromFrames(node map[string]interface{}) map[string]interface
 			continue
 		}
 
-		valueType, typeOK := valueNode["original_type"].(string)
+		valueType, _ := valueNode["original_type"].(string)
 		if value, ok := valueNode["Value"]; ok {
-			if mappedValue, ok := value.(map[string]interface{}); ok && mappedValue != nil {
+			if mappedValue, ok := value.(map[string]interface{}); ok {
 				actualValue, _ := ExtractActualValueFromFrame(mappedValue)
-				if !typeOK {
-					continue
-				}
 				result[name] = map[string]interface{}{
 					"@type":  valueType,
 					"@value": actualValue,
 				}
+			}else{
+				result[name] = map[string]interface{}{
+					"@type":  valueType,
+					"@value": value,
+				}
 			}
-		}
+		} 
 		if innerAttributes, ok := valueNode["attributes"].([]interface{}); ok {
 			innerMap := map[string]interface{}{
 				"attributes": innerAttributes,
@@ -381,16 +383,19 @@ func ExtractActualValueFromFrame(valueMap map[string]interface{}) (interface{}, 
 		if value, ok := listValue["values"]; ok {
 			for _, v := range value.([]interface{}) {
 				if valueNode, ok := v.(map[string]interface{}); ok {
-					valueType, typeOK := valueNode["original_type"].(string)
-					if !typeOK {
-						continue
-					}
+					valueType, _ := valueNode["original_type"].(string)
 					if val, ok := valueNode["Value"]; ok {
 						if val != nil {
 							extractedVal, _ := ExtractActualValueFromFrame(val.(map[string]interface{}))
 							valueMap := map[string]interface{}{
 								"@type":  valueType,
 								"@value": extractedVal,
+							}
+							values = append(values, valueMap)
+						}else{
+							valueMap := map[string]interface{}{
+								"@type":  valueType,
+								"@value": nil,
 							}
 							values = append(values, valueMap)
 						}
@@ -404,26 +409,48 @@ func ExtractActualValueFromFrame(valueMap map[string]interface{}) (interface{}, 
 	// Map values
 	if mapValue, ok := valueMap["MapValue"].(map[string]interface{}); ok {
 		result := make(map[string]interface{})
-		if pairs, ok := mapValue["pairs"]; ok {
-			for _, p := range pairs.([]interface{}) {
+		if pairs, ok := mapValue["pairs"].([]interface{}); ok {
+			for _, p := range pairs {
 				pair := p.(map[string]interface{})
+	
+				// Process the key
+				var extractedKeyStr string
 				if keyVal, ok := pair["first"].(map[string]interface{}); ok {
 					if key, ok := keyVal["Value"].(map[string]interface{}); ok {
 						extractedKey, _ := ExtractActualValueFromFrame(key)
-						if valVal, ok := pair["second"].(map[string]interface{}); ok {
-							if val, ok := valVal["Value"].(map[string]interface{}); ok {
-								extractedVal, _ := ExtractActualValueFromFrame(val)
-								if keyStr, ok := extractedKey.(string); ok { // Only insert into the map if key is string type
-									result[keyStr] = extractedVal
-								}
+						extractedKeyStr = fmt.Sprintf("%v", extractedKey)
+						// firstType, typeOK := keyVal["original_type"].(string)
+						// if typeOK {
+						// 	firstVal = map[string]interface{}{
+						// 		"@type":  firstType,
+						// 		"@value": extractedKey,
+						// 	}
+						// }
+					}
+				}
+	
+				// Process the value
+				var secondVal interface{}
+				if valVal, ok := pair["second"].(map[string]interface{}); ok {
+					if val, ok := valVal["Value"].(map[string]interface{}); ok {
+						extractedVal, _ := ExtractActualValueFromFrame(val)
+						secondType, typeOK := valVal["original_type"].(string)
+						if typeOK {
+							secondVal = map[string]interface{}{
+								"@type":  secondType,
+								"@value": extractedVal,
 							}
 						}
 					}
 				}
+	
+					
+				result[extractedKeyStr] = secondVal
+
 			}
 		}
 		return result, true
 	}
-
+	
 	return nil, false
 }
