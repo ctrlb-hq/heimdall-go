@@ -234,7 +234,6 @@ func (d *outputWs) GetFramesForTracePointSnapshotEvent(localsJson []byte, traceb
 		return nil, errors.New("Unexpected frames")
 	}
 	result := utils.ExtractVariableFromFrames(namespaceValue)
-
 	if len(frames) > 0 {
 		frames[0].Variables = result
 	}
