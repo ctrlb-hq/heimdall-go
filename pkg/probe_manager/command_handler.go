@@ -108,7 +108,6 @@ func createProbeObject(probeId string, expireCount int, expireSecs int, filename
 	if processedConditional != "" {
 		probeConfig["conditional"] = processedConditional
 	}
-
 	return probeConfig
 }
 

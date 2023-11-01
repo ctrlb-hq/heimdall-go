@@ -179,13 +179,13 @@ func (i *InstrumentationService) ClearProbes() {
 	}
 }
 
-func (i *InstrumentationService) ListLocations() []*locations.Location {
+func (i *InstrumentationService) ListLocations() []locations.Location {
 	i.instrumentationLock.Lock()
 	defer i.instrumentationLock.Unlock()
 
-	locations := []*locations.Location{}
+	locations := []locations.Location{}
 	for _, loc := range i.locations.Locations() {
-		locations = append(locations, &loc)
+		locations = append(locations, loc)
 	}
 	return locations
 }

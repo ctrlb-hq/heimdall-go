@@ -24,7 +24,7 @@ type ProbeManager interface {
 	EnableProbe(types.ProbeID, string) error
 	DisableProbe(types.ProbeID, string) error
 	ClearProbes()
-	ListLocations() []*locations.Location
+	ListLocations() []locations.Location
 }
 
 type probeManager struct {
@@ -62,11 +62,11 @@ func (a *probeManager) cleanPermanenetlyDisabledBreakpoints(ctx context.Context,
 		case <-monitorTimeout.C:
 			locs := a.ListLocations()
 			for _, loc := range locs {
-				if (*loc).GetProbe().IsTimeExpired() {
-					(*loc).GetProbe().SetPermanentDisabled()
+				if (loc).GetProbe().IsTimeExpired() {
+					(loc).GetProbe().SetPermanentDisabled()
 				}
-				if (*loc).GetProbe().GetPermanentDisabled() {
-					a.RemoveProbe((*loc).GetProbe().GetProbeID(), "")
+				if (loc).GetProbe().GetPermanentDisabled() {
+					a.RemoveProbe((loc).GetProbe().GetProbeID(), "")
 				}
 			}
 		}
@@ -177,7 +177,7 @@ func (a *probeManager) DisableProbe(probeID types.ProbeID, client string) error 
 	return a.sendApplicationStatusEvent(client)
 }
 
-func (a *probeManager) ListLocations() []*locations.Location {
+func (a *probeManager) ListLocations() []locations.Location {
 	return a.triggerServices.ListLocations()
 }
 
@@ -187,39 +187,39 @@ func (a *probeManager) sendApplicationStatusEvent(client string) error {
 	logPoints := []*messages.LogPoint{}
 
 	for _, location := range locations {
-		if (*location).GetProbe().GetProbeType() == "tracepoint" {
+		if (location).GetProbe().GetProbeType() == "tracepoint" {
 			tp := messages.TracePoint{}
-			tp.TracePointId = (*location).GetProbeID()
+			tp.TracePointId = (location).GetProbeID()
 			tp.TracingEnabled = false
-			tp.FileName = (*location).GetFileName()
-			tp.LineNo = (*location).GetLineno()
-			tp.Client = (*location).GetProbe().GetClient()
-			tp.ConditionExpression = (*location).GetProbe().GetConditionString()
-			tp.ExpireSecs = (*location).GetProbe().GetExpireSecs()
-			tp.ExpireCount = (*location).GetProbe().GetExpireCount()
-			tp.FileHash = (*location).GetFileHash()
-			tp.Disabled = (*location).GetProbe().GetDisabled()
+			tp.FileName = (location).GetFileName()
+			tp.LineNo = (location).GetLineno()
+			tp.Client = (location).GetProbe().GetClient()
+			tp.ConditionExpression = (location).GetProbe().GetConditionString()
+			tp.ExpireSecs = (location).GetProbe().GetExpireSecs()
+			tp.ExpireCount = (location).GetProbe().GetExpireCount()
+			tp.FileHash = (location).GetFileHash()
+			tp.Disabled = (location).GetProbe().GetDisabled()
 			tp.Tags = []string{} // TODO - no need
 			tp.Timestamp = time.Now().UnixMilli()
 
 			tracePoints = append(tracePoints, &tp)
 
-		} else if (*location).GetProbe().GetProbeType() == "logpoint" {
+		} else if (location).GetProbe().GetProbeType() == "logpoint" {
 			lp := messages.LogPoint{}
-			lp.LogPointId = (*location).GetProbeID()
-			lp.FileName = (*location).GetFileName()
-			lp.LineNo = (*location).GetLineno()
-			lp.Client = (*location).GetProbe().GetClient()
-			lp.ConditionExpression = (*location).GetProbe().GetConditionString()
-			lp.ExpireSecs = (*location).GetProbe().GetExpireSecs()
-			lp.ExpireCount = (*location).GetProbe().GetExpireCount()
-			lp.FileHash = (*location).GetFileHash()
-			lp.Disabled = (*location).GetProbe().GetDisabled()
+			lp.LogPointId = (location).GetProbeID()
+			lp.FileName = (location).GetFileName()
+			lp.LineNo = (location).GetLineno()
+			lp.Client = (location).GetProbe().GetClient()
+			lp.ConditionExpression = (location).GetProbe().GetConditionString()
+			lp.ExpireSecs = (location).GetProbe().GetExpireSecs()
+			lp.ExpireCount = (location).GetProbe().GetExpireCount()
+			lp.FileHash = (location).GetFileHash()
+			lp.Disabled = (location).GetProbe().GetDisabled()
 			lp.Tags = []string{} // TODO - no need
 			lp.Timestamp = time.Now().UnixMilli()
-			lp.LogExpression = (*location).GetProbe().GetLogExpression()
-			lp.LogLevel = (*location).GetProbe().GetLogLevel()
-			lp.StdoutEnabled = (*location).GetProbe().GetStdoutEnabled()
+			lp.LogExpression = (location).GetProbe().GetLogExpression()
+			lp.LogLevel = (location).GetProbe().GetLogLevel()
+			lp.StdoutEnabled = (location).GetProbe().GetStdoutEnabled()
 
 			logPoints = append(logPoints, &lp)
 
