@@ -2,7 +2,6 @@ package probes
 
 import (
 	"encoding/json"
-	"fmt"
 	"regexp"
 	"strings"
 	"sync"
@@ -179,7 +178,6 @@ func (a *probe) GetLogMessage(logExpression string, namespace *probeNamespace) s
 			continue
 		}
 		variableStr := ""
-		fmt.Println("111tring to do somerhng", string(jsonData))
 		_, ok := frames["attributes"].([]interface{})
 		if ok {
 			result := utils.ExtractVariableFromFrames(frames)
@@ -213,7 +211,6 @@ func (a *probe) GetLogMessage(logExpression string, namespace *probeNamespace) s
 		placeholder := "{{" + variable + "}}"
 		logExpression = strings.ReplaceAll(logExpression, placeholder, value)
 	}
-	fmt.Println("tring to do somerhng")
 	return logExpression
 }
 

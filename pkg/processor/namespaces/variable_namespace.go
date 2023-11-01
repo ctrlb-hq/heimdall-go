@@ -251,7 +251,6 @@ func (v *VariableNamespace) ReadKey(key interface{}) (Namespace, heimdallErrors.
 }
 
 func (v *VariableNamespace) GetObject() interface{} {
-	fmt.Println("hereeeeee-------")
 	switch v.Obj.Kind {
 	case reflect.Bool:
 		return constant.BoolVal(v.Obj.Value)
