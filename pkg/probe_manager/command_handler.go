@@ -3,6 +3,7 @@ package probe_manager
 import (
 	"strings"
 	"time"
+	"unicode"
 
 	"github.com/ctrlb-hq/heimdall-go/pkg/com_ws"
 	"github.com/ctrlb-hq/heimdall-go/pkg/common"
@@ -16,6 +17,34 @@ type CommandHandler struct {
 	agentCom     com_ws.AgentCom
 	probeManager ProbeManager
 	output       com_ws.Output
+}
+
+func processConditional(statement string) string {
+	result := ""
+	identifier := ""
+	inString := false // To track if we're inside a string literal
+
+	for i, ch := range statement {
+		if ch == '"' {
+			inString = !inString
+			result += string(ch)
+			continue
+		}
+
+		if !inString && (unicode.IsLetter(ch) || ch == '_' || (unicode.IsDigit(ch) && len(identifier) > 0)) {
+			identifier += string(ch)
+			if i == len(statement)-1 {
+				result += "frame." + identifier
+			}
+		} else {
+			if len(identifier) > 0 && !inString {
+				result += "frame." + identifier
+				identifier = ""
+			}
+			result += string(ch)
+		}
+	}
+	return result
 }
 
 func createProbeObject(probeId string, expireCount int, expireSecs int, filename string, lineno int, hash string, probeType string, client string, logExpression string, stdoutEnabled bool, logLevel string, conditionExpression string) map[string]interface{} {
@@ -74,8 +103,11 @@ func createProbeObject(probeId string, expireCount int, expireSecs int, filename
 	probeConfig["logExpression"] = logExpression
 	probeConfig["stdoutEnabled"] = stdoutEnabled
 	probeConfig["logLevel"] = logLevel
-	probeConfig["conditional"] = conditionExpression
 
+	processedConditional := processConditional(conditionExpression)
+	if processedConditional != "" {
+		probeConfig["conditional"] = processedConditional
+	}
 	return probeConfig
 }
 

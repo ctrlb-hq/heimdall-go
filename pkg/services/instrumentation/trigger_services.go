@@ -41,11 +41,11 @@ func (t TriggerServices) EnableProbe(probeID types.ProbeID) error {
 	return errors.Errorf("Couldn't remove aug (%s), instrumentationService is nil", probeID)
 }
 
-func (t TriggerServices) ListLocations() []*locations.Location {
+func (t TriggerServices) ListLocations() []locations.Location {
 	if t.instrumentationService != nil {
 		return t.instrumentationService.ListLocations()
 	}
-	return []*locations.Location{}
+	return []locations.Location{}
 }
 
 func (t TriggerServices) DisableProbe(probeID types.ProbeID) error {
